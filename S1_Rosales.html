@@ -8,15 +8,16 @@
     <style>
         table {
             border-collapse: collapse;
-            border: 2px solids black;
+            border: 3px solids black;
         }
         th, td {
             border: 1px solid black;
             padding: 2px 20px;
             text-align: center;
-
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: smaller;
         }
-        tr:nth-child(2n+1) td {
+        tr:nth-child(4n) td, tr:nth-child(4n-1) td{
             background-color: lightgray;
         }
         tr:nth-child(odd) th{
@@ -25,12 +26,45 @@
         tr:nth-child(even) th{
             background-color: lightgray;
         }
-        tr:nth-child(4) td{
-            background-color: yellow;
-
+        td.supplier {
+            background-color: rgb(223, 223, 18);
+            font-weight: bold;
         }
-
-
+        th.supplier {
+            padding-left: 2px;
+            padding-right: 2px;
+        }
+        td.name-cell {
+            text-align: left;
+            padding-left: 2px;
+            padding-right: 35px;
+        }
+        .image-cell {
+            width: 120px;
+            height: 160px;
+            padding: 0;
+        }
+        .image-cell img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        input.name, input.email {
+            width: 400px;
+        }
+        input.contact {
+            width: 200px;
+        }
+        button {      
+            background-color:rgb(125, 132, 141);
+            border-radius: 5px;
+        }
+        input, textarea {
+            background-color:rgb(237, 232, 232);  
+            border: 2px solid lightgray;     
+            border-radius: 5px;
+        }
     </style>
 </head>
 <body>
@@ -43,60 +77,86 @@
                 <th>ID</th>
                 <th>Name</th>
                 <th>Quantity</th>
-                <th>Supplier</th>
+                <th class="supplier">Supplier</th>
                 <th>Date</th>
                 <th>Image</th>
             </tr>
         </thead>
+        <tbody>
             <tr>
                 <td>10001</td>
-                <td>Boy Bawang Adobo (pc)</td>
+                <td class="name-cell">Boy Bawang Adobo (pc)</td>
                 <td>1000</td>
-                <td rowspan="8">KSK</td>
+                <td rowspan="8" class="supplier">KSK</td>
                 <td rowspan="2">5/14/2019</td>
-                <td rowspan="8"> <img src="https://drive.google.com/file/d/1lpFQA7xSbC4DEOg5qsspGyoCKjRMYvt4/view" alt="Boy Bawang"></td>
+                <td rowspan="8" class="image-cell">
+                     <img src="https://pinoygroseri.com/cdn/shop/products/WebsitePhoto_4_33877141-57a2-4f1c-be8f-d4df1999e25a_1800x.png?v=1611959716" alt="Boy Bawang">
+                </td>
             </tr>
             <tr>
                 <td>10002</td>
-                <td>Boy Bawang Adobo (pack)</td>
+                <td class="name-cell">Boy Bawang Adobo (pack)</td>
                 <td>200</td>
             </tr>
             <tr>
                 <td>10003</td>
-                <td>Boy Bawang Garlic (pc)</td>
+                <td class="name-cell">Boy Bawang Garlic (pc)</td>
                 <td>3000</td>
                 <td rowspan="2">5/15/2019</td>
             </tr>
             <tr>
                 <td>10004</td>
-                <td>Boy Bawang Garlic (pack)</td>
+                <td class="name-cell">Boy Bawang Garlic (pack)</td>
                 <td style="color: red;">150</td>
             </tr>
             <tr>
                 <td>10005</td>
-                <td>Boy Bawang Spicy (pc)</td>
+                <td class="name-cell">Boy Bawang Spicy (pc)</td>
                 <td>4000</td>
                 <td rowspan="2">5/16/2019</td>
             </tr>
             <tr>
                 <td>10006</td>
-                <td>Boy Bawang Spicy (pack)</td>
+                <td class="name-cell">Boy Bawang Spicy (pack)</td>
                 <td>150</td>
             </tr>
             <tr>
                 <td>10007</td>
-                <td>Boy Bawang BBQ (pc)</td>
+                <td class="name-cell">Boy Bawang BBQ (pc)</td>
                 <td>3000</td>
                 <td rowspan="2">5/17/2019</td>
             </tr>
             <tr>
                 <td>10008</td>
-                <td>Boy Bawang BBQ (pack)</td>
+                <td class="name-cell">Boy Bawang BBQ (pack)</td>
                 <td>210</td>
             </tr>
-        <tbody>
-
         </tbody>
     </table>
+
+    <br><br>
+
+    <form> 
+        <label for="name">Your Name*</label><br>
+        <input type="text" id="name" class="name" name="name" required>
+        <br><br>
+
+        <label for="email">Email*</label><br>
+        <input type="email" id="email" class="email" name="email" required>
+        <br><br>
+
+        <label for="contact">Contac No.*</label><br>
+        <input type="tel" id="contact" class="contact" name="contact" required>
+        <br><br>
+
+        <label for="message">Message</label><br>
+        <textarea id="message" name="message" class="message" rows="10" cols="65"> </textarea>
+        <br><br>
+
+        <small>required field*</small>
+        <br><br>
+
+        <button type="submit" disabled>Send</button>
+    </form>
 </body>
 </html>
