@@ -3,78 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rosales' Resume</title>
+    <title>Employee Registration Form</title>
+    <link rel="stylesheet" href="external_registration.css"> <!--EXTERNAL CSS-->
 </head>
 <body>
+    <h1>Employee Registration Form</h1>
+    <p>Please fill in the informatin requested below in order to complete the employee registratin. Thank you!</p>
 
-    <div class="profilePicture">
-        <img src="profile.jpg" alt="Erela Gavrielle's Picture">
-    </div>
-    <div class="profile">
-        <h1>Erela Gavrielle Alday Rosales</h1>
-        <h3>Profile</h3>
-        <a>An FEU Tech student studying BSITAGD motivated to learn new things that can help in the near future and earn experience in today's work environment.</a>
-        <h3>Telephone : +63 9397235834</h3> <h3>Email : 202411030@fit.edu.ph</h3>
-    </div>
+    <form name="employeeRegistrationForm"> 
+        <label for="name">Full Name<a>*</a></label> <br>
+        <input type="text" id="firstName" class="firstName" name="firstName" placeholder="First Name*" required> 
+        <input type="text" id="middleName" class="middleName" name="middleName" placeholder="Middle Name">
+        <input type="text" id="lastName" class="lastName" name="lastName" placeholder="Last Name*" required>
+        <br> <br>
 
-    <div class="education">
-        <table>
-            <thead>
-                <tr>
-                    <th>Year</th>
-                    <th>School</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>2014 - 2016</td>
-                    <td>De La Salle Lipa</td>
-                </tr>
-                <tr>
-                    <td>2016 - 2020</td>
-                    <td>De La Salle Lipa</td>
-                </tr>             
-                <tr>
-                    <td>2024 - current</td>
-                    <td>FEU Tech</td>
-                </tr>
-            </tbody>
-        </table>
+        <label for="dob">Date of Birth<a>*</a></label><br>
+        <input type="date" id="dateOfBirth" class="dateOfBirth" name="dateOfBirth" required><br><br>
+
         
-    </div>
+        <label for="gender">Gender</label>        
+        <label for="maritalStatus" id="maritalStatusLabel">Marital Status<a>*</a></label>
+        <br>
 
-    <div class="skills">
-        <h3>Skills</h3>
-        <ul>
-            <li>Creative</li>
-            <li>Organized</li>
-            <li>Flexible</li>
-            <li>Responsible</li>
-            <li>Patient</li>
-        </ul>
-    </div>
+        <select id="gender" class="gender" name="gender">
+            <option value="">--- Select Gender ---</option>
+            <option value="n/a">Rather not say</option>
+            <option value="female">Female</option>
+            <option value="male">Male</option>
+        </select>
+        
+        <select id="maritalStatus" class="maritalStatus" name="maritalStatus" required>
+            <option value="">--- Select Status ---</option>
+            <option value="single">Single</option>
+            <option value="married">Married</option>
+            <option value="divorced">Divorced</option>
+            <option value="widowed">Widowed</option>
+            <option value="separated">Separated</option>
+        </select>
+        <br><br>
+        
+        <label for="email">Email<a>*</a></label>
+        <label for="contact" id="contactLabel">Phone Number<a>*</a></label>
+        <br>
 
-    <div class="experience">
-        <ul>
-            <li>Volunteered for an e-games event hosted by Ignis during senior high school with peers</li>
-            <ul>
-                <li>2019 De La Salle Lipa</li>
-                <li>Spectated players of the event</li>
-                <li>Accepted tickets from participants entering the venue</li>
-            </ul>
+        <input type="email" id="email" class="email" id="email" name="email" placeholder="Email*" required>
 
-            <li>Had baking and cooking classes in groups</li>
-            <ul>
-                <li>2016-2018 De La Salle Lipa</li>
-                <li>Researched recipes and discussed with groupmates what to prepare</li>
-                <li>With assigned roles that change once in a while</li>
-            </ul>
-        </ul>
-    </div>
+        <input type="tel" id="contact" class="contact" name="contact" placeholder="### ### #### *" required>
+        <br> <br>
 
-    <div class="references">
-        <h3>References : </h3>
-        <a>References available on request.</a>
-    </div>
+        <label for="address">Home Address<a>*</a></label><br>
+        <input type="address" name="streetAddress" class="streetAddress" id="streetAddress" placeholder="Street Address*" required>
+        <input type="address" name="cityAddress" class="cityAddress" id="cityAddress" placeholder="City*" required>
+        <input type="address" name="provinceAddress" class="provinceAddress" id="provinceAddress" placeholder="Province*" required>
+        <input type="address" name="countryAddress" class="countryAddress" id="countryAddress" placeholder="Country*" required>
+        <input type="address" name="ZIPcode" class="ZIPcode" id="ZIPcode" placeholder="ZIP Code*" required>
+        <br> <br>
+
+        <label for="position" id="positionLabel">Job Title<a>*</a></label> 
+        <label for="department" id="departmentLabel">Department<a>*</a></label>
+        <br>
+
+        <input type="text" id="position" class="position" name="position" placeholder="Job Title*" required>
+        <input type="text" id="department" class="department" name="department" placeholder="Department*" required>
+        <br> <br> 
+
+        <label for="dateHired">Date Hired<a>*</a></label>
+        <label for="employmentType" id="employmentTypeLabel">Employment Type<a>*</a></label>
+        <br>
+
+        <input type="date" id="dateOfHired" class="dateOfHired" name="dateOfHired" required>
+        <select id="employmentType" class="employmentType" name="employmentType" required>
+            <option value="">--- Select Employment Type ---</option>
+            <option value="fullTime">Full-Time</option>
+            <option value="partTime">Part-Time</option>
+            <option value="contracted">Contract</option>
+            <option value="intern">Intern</option>
+        </select>
+        <br><br>
+
+        <label for="emergencyContact">Emergency Contact<a>*</a></label> <br>
+        <input type="text" id="ECname" class="ECname" name="ECname" placeholder="Emergency Contact Name*" required>
+        <input type="tel" id="ECnum" class="ECnum" name="ECnum" placeholder="Emergency Contact Number*" required>
+
+        <small>required field*</small>
+        <br><br>
+
+        <input type="submit" value="Register">
+    </form>
+    
 </body>
 </html>
