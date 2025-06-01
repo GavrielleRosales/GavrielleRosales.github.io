@@ -34,6 +34,7 @@ input, select, textarea {
     border: 1px solid #181919;
     border-radius: 4px;
 }
+
 .firstName, .middleName, .lastName{
     width: 27%;
 }

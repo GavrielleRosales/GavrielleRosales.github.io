@@ -37,8 +37,10 @@
             </div>
 
             <div class="row mb-3">
-                <label for="dob">Date of Birth<span class="text-danger">*</span></label><br>
-                <input type="date" id="dateOfBirth" class="form-control" name="dateOfBirth" required><br><br>
+                <label for="dob">Date of Birth<span class="text-danger">*</span></label>
+                <div class="col-md-12">
+                    <input type="date" id="dateOfBirth" class="form-control" name="dateOfBirth" required>
+                </div>
             </div>
 
             <div class="row mb-3">
@@ -122,34 +124,46 @@
                 </div>
             </div>
 
-            <label for="dateHired">Date Hired<span class="text-danger">*</span></label>
-            <label for="employmentType" id="employmentTypeLabel">Employment Type<span
-                    class="text-danger">*</span></label>
-            <br>
 
-            <input type="date" id="dateOfHired" class="dateOfHired" name="dateOfHired" required>
-            <select id="employmentType" class="employmentType" name="employmentType" required>
-                <option value="">--- Select Employment Type ---</option>
-                <option value="fullTime">Full-Time</option>
-                <option value="partTime">Part-Time</option>
-                <option value="contracted">Contract</option>
-                <option value="intern">Intern</option>
-            </select>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label for="dateHired">Date Hired<span class="text-danger">*</span></label>
+                    <input type="date" id="dateOfHired" class="form-control" name="dateOfHired" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="employmentType" id="employmentTypeLabel">Employment Type<span
+                            class="text-danger">*</span></label>
+                    <select id="employmentType" class="form-select" name="employmentType" required>
+                        <option value="">--- Select Employment Type ---</option>
+                        <option value="fullTime">Full-Time</option>
+                        <option value="partTime">Part-Time</option>
+                        <option value="contracted">Contract</option>
+                        <option value="intern">Intern</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class=" row mb-3">
+                <label for="emergencyContact">Emergency Contact<span class="text-danger">*</span></label>
+                <div class="col-md-6">
+
+                    <input type="text" id="ECname" class="form-control" name="ECname"
+                        placeholder="Emergency Contact Name*" required>
+                </div>
+                <div class="col-md-6">
+                    <input type="tel" id="ECnum" class="form-control" name="ECnum"
+                        placeholder="Emergency Contact Number*" required>
+                </div>
+            </div>
+            <span class="text-danger">required field*</span>
             <br><br>
-
-            <label for="emergencyContact">Emergency Contact<span class="text-danger">*</span></label> <br>
-            <input type="text" id="ECname" class="ECname" name="ECname" placeholder="Emergency Contact Name*" required>
-            <input type="tel" id="ECnum" class="ECnum" name="ECnum" placeholder="Emergency Contact Number*" required>
-
-            <small>required field*</small>
-            <br><br>
-
-            <input type="submit" value="Register">
+            <div class="row mb-3">
+                <div class="col-md-12">
+                    <button type="submit" class="form-control">Register</button>
+                </div>
+            </div>
         </form>
-
     </div>
-
-
 </body>
 
 </html>
