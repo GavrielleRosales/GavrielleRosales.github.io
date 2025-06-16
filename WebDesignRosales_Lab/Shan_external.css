@@ -1,0 +1,18 @@
+body {
+    background-color: rgb(76, 157, 176);
+    font-size: larger;
+    font-family: monospace;
+}
+
+h1, h2, h3, li, p, a{
+    color: rgb(255, 235, 175);
+}
+h1 {
+    text-align: center;
+}
+img {
+    width:200px;
+    height:250px;
+    display: block; 
+    margin: auto;
+}
